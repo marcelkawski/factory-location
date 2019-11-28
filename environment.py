@@ -19,6 +19,7 @@ class Environment:
 		all_cost = 0
 		for source in self.resources:
 			all_cost += source[4] * source[2] * (1 + math.tanh(source[3] * Environment.distance(factory_xy, (source[0], source[1]))))
+		return all_cost
 
 	def set_field(self):
 		for source in self.resources:
