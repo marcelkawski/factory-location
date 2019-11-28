@@ -9,6 +9,7 @@ class Environment:
 		self.workers = list()
 		self.min_x = self.min_y = 9999999999
 		self.max_x = self.max_y = -999999999
+		self.best_bee = None
 
 	def get_input(self, file_name="input.txt"):
 		with open(file_name) as f:
@@ -32,6 +33,14 @@ class Environment:
 		for i in range(n):
 			b = Bee(x=random.randint(self.min_x*1000, self.max_x*1000)/1000, y=random.randint(self.min_y*1000, self.max_y*1000)/1000, env=self)
 			self.workers.append(b)
+
+	def algo11(self, omega, omega_min):
+		for bee in self.workers:
+			print(bee)
+			bee.one_plus_one(omega=omega, omega_min=omega_min)
+			print(bee, end="\n----------------\n")
+			if (self.best_bee is None) or (bee.cost < self.best_bee.cost):
+				self.best_bee = bee
 
 	@staticmethod
 	def distance(first, second):

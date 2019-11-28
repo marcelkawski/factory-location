@@ -6,7 +6,7 @@ class Bee:
 		self.x = x
 		self.y = y
 		self.env = env
-		self.cost = 999999999999999
+		self.cost = self.env.all_cost((x, y))
 
 	def one_plus_one(self, omega, omega_min, c1=0.82, c2=1.2, m=10, max_iter=1000):
 		fi = 0
@@ -18,12 +18,14 @@ class Bee:
 				self.y = y_
 				fi += 1
 			if k % m == 0:
+				fi = fi/m
 				if fi < 0.2:
 					omega *= c1
 				elif fi > 0.2:
 					omega *= c2
-			if fi % m == 0:
 				fi = 0
 			k += 1
+		self.cost = self.env.all_cost((self.x, self.y))
 
-
+	def __str__(self):
+		return f"x: {self.x} y: {self.y} cost: {self.cost}"
