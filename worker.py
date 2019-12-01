@@ -7,8 +7,9 @@ class Bee:
 		self.y = y
 		self.env = env
 		self.cost = self.env.all_cost((x, y))
+		self.k = 0
 
-	def one_plus_one(self, omega, omega_min, c1=0.82, c2=1.2, m=10, max_iter=1000):
+	def one_plus_one(self, omega, omega_min, c1=0.81, c2=1.2, m=10, max_iter=1000):
 		fi = 0
 		k = 0
 		while omega >= omega_min and k < max_iter:
@@ -26,6 +27,7 @@ class Bee:
 				fi = 0
 			k += 1
 		self.cost = self.env.all_cost((self.x, self.y))
+		self.k = k
 
 	def __str__(self):
-		return f"x: {self.x} y: {self.y} cost: {self.cost}"
+		return f"x: {self.x} y: {self.y} cost: {self.cost} steps: {self.k}"

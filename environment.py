@@ -11,10 +11,10 @@ class Environment:
 		self.max_x = self.max_y = -999999999
 		self.best_bee = None
 
-	def get_input(self, file_name="input.txt"):
+	def get_input(self, file_name="input2.txt"):
 		with open(file_name) as f:
 			for line in f:
-				self.resources.append(list(map(int, line.split(" "))))
+				self.resources.append(list(map(float, line.split(" "))))
 
 	def all_cost(self, factory_xy):
 		all_cost = 0
