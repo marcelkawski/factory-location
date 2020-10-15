@@ -23,9 +23,3 @@ def all_cost(factory_xy, resources):
 		#  cost += single_cost(factory_xy=factory_xy, source=source)
 		cost += source[4] * source[2] * (1 + math.tanh(source[3] * distance(factory_xy, (source[0], source[1]))))
 	return cost
-
-
-res = get_input(file_name="input.txt")
-
-for x in range(-50, 50):
-	print(f"{x}: {all_cost((x,0), res)}")
