@@ -9,7 +9,7 @@ Finding the best location for a factory using an evolutionary algorithm (1+1) ba
 * [Description](#description)
 
 ## General info
-Project realised with @ppawel11 for the subject Fundamentals of Artificial Intelligence on the Warsaw University of Technology. Our goal was to get familiar with some methods and algorithms of artificial intelligence and to use it in practise.
+Project realised with [@ppawel11](https://github.com/ppawel11) for the subject Fundamentals of Artificial Intelligence on the Warsaw University of Technology. Our goal was to get familiar with some methods and algorithms of artificial intelligence and to use it in practise.
 
 ## Screenshots
 ![Screenshot](./img/screenshot.png)
