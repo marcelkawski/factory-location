@@ -1,12 +1,12 @@
 import math
-from worker import Bee
 import random
+from bee import Bee
 
 
 class Environment:
 	def __init__(self):
 		self.resources = list()
-		self.workers = list()
+		self.bees = list()
 		self.min_x = self.min_y = 9999999999
 		self.max_x = self.max_y = -999999999
 		self.best_bee = None
@@ -32,10 +32,10 @@ class Environment:
 	def add_bees(self, n):
 		for i in range(n):
 			b = Bee(x=random.randint(self.min_x*1000, self.max_x*1000)/1000, y=random.randint(self.min_y*1000, self.max_y*1000)/1000, env=self)
-			self.workers.append(b)
+			self.bees.append(b)
 
 	def algo11(self, omega, omega_min):
-		for bee in self.workers:
+		for bee in self.bees:
 			print(bee)
 			bee.one_plus_one(omega=omega, omega_min=omega_min)
 			print(bee, end="\n----------------\n")
