@@ -28,4 +28,4 @@ class Bee:
 			self.k += 1
 
 	def __str__(self):
-		return f"x: {self.x} y: {self.y} cost: {self.cost} steps: {self.k}"
+		return f" x: {self.x} y: {self.y} cost: {self.cost} steps: {self.k}"
