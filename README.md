@@ -16,6 +16,14 @@ Project realised with [@ppawel11](https://github.com/ppawel11) for the subject F
 
 ## Technologies
 * Python 3.7
+* cycler - version 0.10.0
+* kiwisolver - version 1.1.0
+* matplotlib  - version 3.1.2
+* numpy - version 1.17.4
+* pyparsing - version 2.4.5
+* python-dateutil - version 2.8.1
+* six - version 1.13.0
+* tkinter (to draw a chart)
 
 ## Setup
 First, to generate input (txt file with data: resources locations and some data necessary to calculate cost of the transport of the resource) you need to run `input_maker` typing: `python input_maker.py NUMBER_OF_RESOURCES` or `python3 input_maker.py NUMBER_OF_RESOURCES` for Python 3 where NUMBER_OF_RESOURCES should be `int` variable. Then you can run `main.py`. 
